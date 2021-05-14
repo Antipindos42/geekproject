@@ -35,15 +35,32 @@ print(my_list)
 Напишите решения через list и через dict.
  '''
 #dict
-seasons = {'Winter': (1, 2, 12),
-           'Sping': (3, 4, 5),
-           'Summer': (6, 7, 8),
-           'Autumn': (9, 10, 11)}
- 
+seasons: dict[str, tuple[int, int, int]] = {'Winter': (1, 2, 12),
+          'Spring': (3, 4, 5),
+          'Summer': (6, 7, 8),
+          'Autumn': (9, 10, 11)}
+
 month = int(input('Choose a month: '))
 for key in seasons.keys():
     if month in seasons[key]:
         print(key)
- 
+else:
+    print('ERROR')
 
+
+# list
+
+month = int(input('Choose a month: '))
+if month in (1, 2, 12):
+    print('winter')
+elif month in (3, 4, 5):
+    print('spring')
+elif month in (6, 7, 8):
+    print('summer')
+elif month in (9, 10, 11):
+    print('fall')
+else:
+    print('ERROR')
+
+4.
 
